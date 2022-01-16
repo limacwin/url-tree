@@ -20,13 +20,18 @@ body {
 
 .card {
     height: auto;
-    width: 23rem;
+    width: 22rem;
     padding: 25px;
     border-radius: 20px;
     background-color: rgb(154, 70, 233);
     background: linear-gradient(135deg, #de92f5, #9a01d6);
     text-align: center;
     font-weight: 400;
+}
+
+p {
+    margin: 10px 0px;
+    font-size: 15px;
 }
 
 .display-image {
@@ -38,6 +43,10 @@ body {
     padding: 5px;
     font-weight: 600;
     color: white;
+}
+
+.link-set {
+    font-size: 12px;
 }
 
 .link-tab {
@@ -52,7 +61,7 @@ body {
     border-radius: 7px;
     color: white;
     font-weight: 600;
-    font-size: 15px;
+    font-size: 13px;
     text-align: center;
     transition: 1s;
 }
@@ -79,6 +88,10 @@ input {
 
 .app-icon {
     height: 30px;
+}
+
+footer {
+    font-size: 15px;
 }
 
 .mini-github {
