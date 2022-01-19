@@ -15,6 +15,8 @@ body {
     justify-content: center;
     background-color: #0093E9;
     background: linear-gradient(45deg, #0093E9, #80D0C7);
+    background-attachment: fixed;
+    background-repeat: no-repeat;
     min-height: 100vh;
 }
 
@@ -22,31 +24,40 @@ body {
     height: auto;
     width: 22rem;
     padding: 25px;
+    margin: 30px;
     border-radius: 20px;
     background-color: rgb(154, 70, 233);
-    background: linear-gradient(135deg, #de92f5, #9a01d6);
+    background: linear-gradient(135deg, #eea9ff, #9a01d6);
+    background-size: 400% 400%;
+    animation: change 5s ease-in-out infinite;
+    display: flex;
+    flex-direction: column;
     text-align: center;
-    font-weight: 400;
+    
 }
 
 p {
-    margin: 10px 0px;
+    margin: 0px 0px 10px 0px;
     font-size: 15px;
 }
 
 .display-image {
+    align-self: center;
     height: 200px;
+    width: 200px;
     border-radius: 50%;
 }
 
 .about {
-    padding: 5px;
+    padding: 17px 5px 5px 5px;
     font-weight: 600;
     color: white;
 }
 
 .link-set {
     font-size: 12px;
+    display: flex;
+    flex-direction: column;
 }
 
 .link-tab {
@@ -56,7 +67,7 @@ p {
     justify-content: center;
     flex-direction: row;
     padding: 10px 20px;
-    margin: 20px 0px;
+    margin: 10px 0px;
     background-color: rgb(226, 69, 69);
     border-radius: 7px;
     color: white;
@@ -78,12 +89,11 @@ input {
     font-weight: 600;
     font-size: 15px;
     cursor: pointer;
-    transition: 1s;
+    transition: transform .5s;
 }
 
-.link-tab:hover, input:hover {
-    background-color: aquamarine;
-    color: red;
+.link-tab:hover {
+    transform: scale(1.05);
 }
 
 .app-icon {
@@ -91,15 +101,23 @@ input {
 }
 
 footer {
-    font-size: 15px;
+    font-weight: 400;
+    font-size: 14px;
+    margin-top: 10px;
 }
 
 .mini-github {
     height: 17px;
 }
 
-@media screen and (max-width: 720px) {
-    .link-set {
-        width: 100%;
+@keyframes change {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
     }
 }
